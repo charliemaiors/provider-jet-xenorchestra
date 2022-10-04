@@ -2,7 +2,7 @@
 # Setup Project
 
 PROJECT_NAME := provider-jet-xenorchestra
-PROJECT_REPO := github.com/crossplane-contrib/$(PROJECT_NAME)
+PROJECT_REPO := github.com/charliemaiors/$(PROJECT_NAME)
 
 export TERRAFORM_VERSION := 1.1.6
 
