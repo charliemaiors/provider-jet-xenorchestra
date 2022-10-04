@@ -1,4 +1,4 @@
-package vm
+package cloudconfig
 
 import "github.com/crossplane/terrajet/pkg/config"
 

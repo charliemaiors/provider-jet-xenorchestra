@@ -1,4 +1,4 @@
-package vm
+package resourceset
 
 import "github.com/crossplane/terrajet/pkg/config"
 

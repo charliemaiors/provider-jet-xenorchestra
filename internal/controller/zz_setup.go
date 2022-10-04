@@ -21,7 +21,10 @@ import (
 
 	"github.com/crossplane/terrajet/pkg/controller"
 
+	acl "github.com/charliemaiors/provider-jet-xenorchestra/internal/controller/acl/acl"
+	config "github.com/charliemaiors/provider-jet-xenorchestra/internal/controller/cloudconfig/config"
 	providerconfig "github.com/charliemaiors/provider-jet-xenorchestra/internal/controller/providerconfig"
+	set "github.com/charliemaiors/provider-jet-xenorchestra/internal/controller/resourceset/set"
 	vm "github.com/charliemaiors/provider-jet-xenorchestra/internal/controller/vm/vm"
 )
 
@@ -29,7 +32,10 @@ import (
 // the supplied manager.
 func Setup(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
+		acl.Setup,
+		config.Setup,
 		providerconfig.Setup,
+		set.Setup,
 		vm.Setup,
 	} {
 		if err := setup(mgr, o); err != nil {

@@ -22,7 +22,10 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/charliemaiors/provider-jet-xenorchestra/apis/v1alpha1"
+	v1alpha1 "github.com/charliemaiors/provider-jet-xenorchestra/apis/acl/v1alpha1"
+	v1alpha1cloudconfig "github.com/charliemaiors/provider-jet-xenorchestra/apis/cloudconfig/v1alpha1"
+	v1alpha1resourceset "github.com/charliemaiors/provider-jet-xenorchestra/apis/resourceset/v1alpha1"
+	v1alpha1apis "github.com/charliemaiors/provider-jet-xenorchestra/apis/v1alpha1"
 	v1alpha1vm "github.com/charliemaiors/provider-jet-xenorchestra/apis/vm/v1alpha1"
 )
 
@@ -30,6 +33,9 @@ func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1cloudconfig.SchemeBuilder.AddToScheme,
+		v1alpha1resourceset.SchemeBuilder.AddToScheme,
+		v1alpha1apis.SchemeBuilder.AddToScheme,
 		v1alpha1vm.SchemeBuilder.AddToScheme,
 	)
 }

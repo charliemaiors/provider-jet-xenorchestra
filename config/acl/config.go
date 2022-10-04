@@ -1,4 +1,4 @@
-package vm
+package acl
 
 import "github.com/crossplane/terrajet/pkg/config"
 
