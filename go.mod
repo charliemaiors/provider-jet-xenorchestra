@@ -1,4 +1,4 @@
-module github.com/charliemaiors/provider-jet-xenorchestra
+module github.com/crossplane-contrib/provider-jet-xenorchestra
 
 go 1.19
 
@@ -23,6 +23,7 @@ require (
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.1 // indirect
+	github.com/charliemaiors/provider-jet-xenorchestra v0.0.0-20221004134757-760cafe15d0a // indirect
 	github.com/dave/jennifer v1.4.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/evanphx/json-patch v4.12.0+incompatible // indirect
