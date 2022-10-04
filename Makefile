@@ -9,8 +9,8 @@ export TERRAFORM_VERSION := 1.1.6
 export TERRAFORM_PROVIDER_SOURCE := terra-farm/xenorchestra
 export TERRAFORM_PROVIDER_VERSION := 0.23.3
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME := terraform-provider-xenorchestra
-export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX := https://github.com/terra-farm/terraform-provider-xenorchestra/releases/download/v0.23.3
-export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-xenorchestra_0.23.3_
+export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX := https://github.com/terra-farm/terraform-provider-xenorchestra/releases/download/
+export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-xenorchestra
 
 PLATFORMS ?= linux_amd64 linux_arm64
 

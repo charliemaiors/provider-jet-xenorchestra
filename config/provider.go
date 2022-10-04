@@ -23,6 +23,9 @@ import (
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
+	"github.com/charliemaiors/provider-jet-xenorchestra/config/acl"
+	"github.com/charliemaiors/provider-jet-xenorchestra/config/cloudconfig"
+	"github.com/charliemaiors/provider-jet-xenorchestra/config/resourceset"
 	"github.com/charliemaiors/provider-jet-xenorchestra/config/vm"
 )
 
@@ -47,11 +50,17 @@ func GetProvider() *tjconfig.Provider {
 		tjconfig.WithDefaultResourceFn(defaultResourceFn),
 		tjconfig.WithIncludeList([]string{
 			"xenorchestra_vm$",
+			"xenorchestra_resource_set$",
+			"xenorchestra_acl$",
+			"xenorchestra_cloud_config$",
 		}))
 
 	for _, configure := range []func(provider *tjconfig.Provider){
 		// add custom config functions
 		vm.Configure,
+		acl.Configure,
+		cloudconfig.Configure,
+		resourceset.Configure,
 	} {
 		configure(pc)
 	}
