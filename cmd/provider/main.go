@@ -36,12 +36,12 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	"github.com/crossplane-contrib/provider-jet-xenorchestra/apis"
-	"github.com/crossplane-contrib/provider-jet-xenorchestra/apis/v1alpha1"
-	"github.com/crossplane-contrib/provider-jet-xenorchestra/config"
-	"github.com/crossplane-contrib/provider-jet-xenorchestra/internal/clients"
-	"github.com/crossplane-contrib/provider-jet-xenorchestra/internal/controller"
-	"github.com/crossplane-contrib/provider-jet-xenorchestra/internal/features"
+	"github.com/charliemaiors/provider-jet-xenorchestra/apis"
+	"github.com/charliemaiors/provider-jet-xenorchestra/apis/v1alpha1"
+	"github.com/charliemaiors/provider-jet-xenorchestra/config"
+	"github.com/charliemaiors/provider-jet-xenorchestra/internal/clients"
+	"github.com/charliemaiors/provider-jet-xenorchestra/internal/controller"
+	"github.com/charliemaiors/provider-jet-xenorchestra/internal/features"
 )
 
 func main() {
